@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 class Input extends Component {
-
-  state = {value: ''}
-
-  handleChange = (e) => {
-    this.setState({value: e.target.value})
+  constructor(props) {
+    super(props)
+    this.state = {value: ''}
   }
+  
+    handleChange = (e) => {
+      this.setState({value: e.target.value})
+    }
+
 
   render() {
     const {value} = this.state
@@ -19,9 +22,9 @@ class Input extends Component {
         </label>
         <input
           id={'id'}
-          type={'text'}
+          type="text"
           value={value}
-          placeholder={'Placeholder'}
+          placeholder="Sup dude"
           onChange={this.handleChange}
         />
         <br />

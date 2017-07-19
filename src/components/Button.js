@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 class Button extends Component {
+  constructor(props) {
+    super(props)
 
-  state = {count: 0}
+    this.state = {count: 0}
+  }
+
 
   handleClick = () => {
     const {count} = this.state
